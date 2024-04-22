@@ -14,7 +14,7 @@ export const MySelect = ({ label, ...props }: Props) => {
   return (
     <>
       <label htmlFor={ props.id || props.name }>{ label }</label>
-      <select { ...field } { ...props } />
+      <select { ...field } { ...props } className={ `${ meta.error ? 'has-error' : ''}` }/>
       <ErrorMessage name={ props.name } component="span" /* tambien se puede poner el -> className="clases-personalizadas"*/ />
     </>
   )

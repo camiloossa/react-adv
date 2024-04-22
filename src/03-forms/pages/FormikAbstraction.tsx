@@ -30,7 +30,6 @@ export const FormikAbstraction = () => {
           terms: Yup.boolean().oneOf([true], 'Debe aceptar terminos y condiciones'),
           jobType: Yup.string().required('Job Type is required').notOneOf(['it-junior'], 'Esta opción no es permitida')
         })}
-
       >
         {
           (/*formik*/) => (

@@ -10,12 +10,12 @@ interface Props {
 
 export const MyTextInput = ( { label, ...props }: Props ) => {
 
-  const [ field ] = useField(props);
+  const [ field, meta ] = useField(props);
 
   return (
     <>
       <label htmlFor={ props.id || props.name }>{ label }</label>
-      <input type="text" { ...field } { ...props } />
+      <input type="text" { ...field } { ...props } className={ `${ meta.error ? 'has-error' : '' }`}/>
       <ErrorMessage name={ props.name } component="span" /* tambien se puede poner el -> className="clases-personalizadas"*/ />
       {/* {
         meta.touched && meta.error && ( <span>{ meta.error } </span>)
