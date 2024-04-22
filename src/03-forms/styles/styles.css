@@ -23,3 +23,8 @@ span, .error-message {
 .has-error {
     border: 1px solid red;
 }
+
+label {
+    margin-top: 10px;
+}
+
